@@ -1,0 +1,48 @@
+<div class="container">
+  <%= form_for [:admins, @film] do |f| %>
+    <div class="row">
+      <div class="col-5">
+        <div class="form-group">
+          <%= f.label :name, t(".name") %>
+          <%= f.text_field :name, class: "form-control", required: true %>
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="form-group">
+          <%= f.label :country, t(".country") %>
+          <%= f.text_field :country, class: "form-control", required: true %>
+        </div>
+      </div>
+      <div class="col-2">
+        <%= f.label :category_id %><br>
+        <%= f.select :category_id, options_for_select(category_name), class: "form-control" %>
+      </div>
+    </div>
+    <%= f.label :movie, t(".movie") %></br>
+    <%= video_tag url_for(@film.movie), controls: true if @film.movie.attached? %>
+    <%= f.file_field :movie, class: "form-control" %><br>
+    <%= f.label :trailer, t(".trailer") %></br>
+    <%= video_tag url_for(@film.trailer), controls: true if @film.trailer.attached? %>
+    <%= f.file_field :trailer, class: "form-control" %><br>
+    <%= f.label :image, t(".image") %></br>
+    <%= image_tag @film.image, width: 100 if @film.image.attached? %>
+    <%= f.file_field :image, class: "form-control" %><br>
+    <%= f.fields_for :film_profile do |ff| %>
+      <div class="row">
+        <div class="col-6">
+          <%= ff.label :release_date, t(".release_date") %></br>
+          <%= ff.datetime_select :release_date, class: "form-control" %>
+        </div>
+        <div class="col-6">
+          <%= ff.label :time, t(".time") %></br>
+          <%= ff.text_field :time, class: "form-control" %>
+        </div>
+      </div>
+      <%= ff.label :resolution, t(".resolution") %></br>
+      <%= ff.text_field :resolution, class: "form-control" %>
+      <%= ff.label :description, t(".description") %></br>
+      <%= ff.text_area :description, class: "form-control" %>
+    <% end %> <br>
+    <%= f.submit t(".submit"), class: "btn btn-primary" %>
+  <% end %>
+</div>

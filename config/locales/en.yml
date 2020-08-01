@@ -1,0 +1,311 @@
+en:
+  layouts:
+    header:
+      sign_up: "Sign up"
+      log_in: "Log in"
+      logout: "Logout"
+      search_placeholder: "Movie..."
+      show_all: "SHOW ALL"
+      lastest_trailers: "LATEST TRAILERS"
+      top_rated: "TOP RATED"
+      most_commented: "MOST COMMENTED"
+    footer:
+      about: "About TopMovie"
+      know: "GET TO KNOW US"
+      become: "BECOME A RETAILER"
+      job: "JOB OPENINGS"
+      events: "EVENTS"
+      location: "Our location"
+      help: "Please Help Us"
+      contact: "CONTACT"
+      faq: "FAQ"
+      store_locator: "STORE LOCATOR"
+      new_user: "NEW USERS"
+      order_status: "ORDER STATUS"
+      connect: "CONNECT"
+      with: "with"
+      us: "US"
+    admin:
+      application:
+        title: "Admin Top Movie"
+      header:
+        log_out: "Log out"
+      slidebar:
+        user: "User"
+        title: "Admin Top Movie"
+        movie: "Movie"
+        category: "Category"
+    login_admin:
+      application:
+        title: "OpenRuby2019MovieViewer"
+  static_pages:
+    home:
+      perious: "Perious"
+      next: "Next"
+    list_movies:
+      hd: "HD-Vietsub"
+  users:
+    passwords:
+      new:
+        email: "Email address"
+        reset_pass: "Reset Password"
+        forgot: "Forgot your password?"
+    registrations:
+      new:
+        sign_up: "Sign Up"
+        email: "Email"
+        password: "Password"
+        password_confir: "Password Confirmation"
+    sessions:
+      new:
+        sign_in: "Sign In"
+        sign_in_wf: " Sign in with Facebook"
+        sign_in_wg: " Sign in with Google+"
+        email: "Email address"
+        password: "Password"
+        fogot: "Forgot password?"
+        sign_up: " Sign up New Account"
+  devise:
+    confirmations:
+      confirmed: "Your email address has been successfully confirmed."
+      send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+    failure:
+      already_authenticated: "You are already signed in."
+      inactive: "Your account is not activated yet."
+      invalid: "Invalid %{authentication_keys} or password."
+      locked: "Your account is locked."
+      last_attempt: "You have one more attempt before your account is locked."
+      not_found_in_database: "Invalid %{authentication_keys} or password."
+      timeout: "Your session expired. Please sign in again to continue."
+      unauthenticated: "You need to sign in or sign up before continuing."
+      unconfirmed: "You have to confirm your email address before continuing."
+    mailer:
+      confirmation_instructions:
+        subject: "Confirmation instructions"
+      reset_password_instructions:
+        subject: "Reset password instructions"
+      unlock_instructions:
+        subject: "Unlock instructions"
+      email_changed:
+        subject: "Email Changed"
+      password_change:
+        subject: "Password Changed"
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      success: "Successfully authenticated from %{kind} account."
+    passwords:
+      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
+      updated: "Your password has been changed successfully. You are now signed in."
+      updated_not_active: "Your password has been changed successfully."
+    registrations:
+      destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
+      signed_up: "Welcome! You have signed up successfully."
+      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
+      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
+      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
+      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address."
+      updated: "Your account has been updated successfully."
+      updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again"
+    sessions:
+      signed_in: "Signed in successfully."
+      signed_out: "Signed out successfully."
+      already_signed_out: "Signed out successfully."
+    unlocks:
+      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
+      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+  errors:
+    messages:
+      already_confirmed: "was already confirmed, please try signing in"
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "has expired, please request a new one"
+      not_found: "not found"
+      not_locked: "was not locked"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"
+  admins:
+    sessions:
+      new:
+        email_placeholder: "Email..."
+        password_placeholder: "Password"
+        title: "Admin Login"
+        log_in: "Log in"
+    shared:
+      links:
+        log_in: "Log in"
+        confirmation: "Didn't receive confirmation instructions?"
+        sign_in: "Sign in with "
+    home:
+      dashboard: "Dashboard"
+      primary_card: "Primary Card"
+      view_details: "View Details"
+      warning_card: "Warning Card"
+      success_card: "Success Card"
+      danger_card: "Danger Card"
+      area: "Area Chart Example"
+      bar: "Bar Chart Example"
+      dataTable: " DataTable Example"
+      name: "Name"
+      position: "Position"
+      office: "Office"
+      age: "Age"
+      start: "Start"
+      salary: "Salary"
+    registrations:
+      edit:
+        edit: "Edit"
+        current: "Currently waiting confirmation for: "
+        blank: "(leave blank if you don't want to change it)"
+        current_password: "(we need your current password to confirm your changes)"
+        updae: "Update"
+        cancel: "Cancel my account"
+        unhappy: "Unhappy? "
+        back: "Back"
+        confirm: "Are you sure?"
+        minimum: " characters minimum"
+      new:
+        title: "Sign up"
+    categories:
+      new:
+        submit: "Submit"
+        new: "New"
+        success: "create success"
+      edit:
+        submit: "Submit"
+      index:
+        add: " Add"
+        id: "Id"
+        name: "Name"
+        action: "Action"
+      create:
+        error: "Create error"
+        success: "Create successful"
+      update:
+        success: "Update successful"
+        not_update: "Updated furniture"
+      destroy:
+        delete_category: "Delete successfull"
+        not_deleted: "Delete successfull"
+      category:
+        edit: "Edit"
+        delete: "Delete"
+        sure: "You sure"
+    users:
+      create:
+        error: "Add new user fail"
+        success: "Create successful"
+      update:
+        error: "Update fail"
+        success: "Update successful"
+      form:
+        user: "Manage User"
+        name: "Full name"
+        email: "Email"
+        password: "Password"
+        submit: "Submit"
+      destroy:
+        success_destroy_user: "This user was destroyed"
+        danger_destroy_user: "You couldn't destroy this user"
+      index:
+        id: "ID"
+        full_name: "Full Name"
+        email: "Email"
+        action: "Action"
+        add: " Add"
+      user:
+        confirm: "Are you sure to delete this user?"
+    films:
+      new:
+        submit: "Submit"
+        name: "Name"
+        country: "Country"
+        movie: "Movie"
+        trailer: "Trailer"
+        image: "Image"
+        release_date: "Release date"
+        time: "Time(minutes)"
+        resolution: "Resolution"
+        description: "Description"
+      index:
+        id: "Id"
+        name: "Name"
+        country: "Country"
+        movie: "Movie"
+        trailer: "Trailer"
+        image: "Image"
+        action: "Action"
+        add: " Add"
+      create:
+        error: "Create error"
+        success: "Create successful"
+        aciton: "Action"
+      film:
+        confirm: "Are you sure to delete this film?"
+      edit:
+        submit: "Update"
+        not_found_film: "Not found this film"
+        movie: "Movie"
+        trailer: "Trailer"
+        image: "Image"
+        time: "Time (minutes)"
+        release_date: "Release date"
+        description: "Description"
+        resolution: "Resolution"
+      update:
+        not_found_film: "Not found this film"
+        success: "Update success"
+        danger: "Can not update this film!"
+      destroy:
+        success_destroy_film: "This film was destroyed"
+        danger_destroy_film: "You couldn't destroy this film"
+        not_found_film: "Not found this film"
+  films:
+    index:
+      hd: "HD-Vietsub"
+    show:
+      trailer: "Trailer"
+      actor: "Actor"
+      resolution: "The resolution"
+      date: "Release Date"
+      time: "Time"
+      minutes: "minutes"
+      close: "Close"
+      not_found: "Not Found Film"
+      vote: "Your vote:"
+      must: "You must "
+      login: "Log In"
+      to_comment: " to comment this film!"
+      comment: "Comment"
+    find_film_profile:
+      not_found: "not found profile film"
+    find_category:
+      not_found_category: "Not Found Category"
+  search_films:
+    index:
+      no_suitable: "Search results do not match: "
+      not_found: "not found film"
+  ratings:
+    create:
+      successful: "Add Rating successful"
+      fail: "Ratings fail"
+      loggin: "Please login"
+      not_found: "Not Found"
+  comments:
+    comment:
+      not_found_user: "Not found user"
+      reply: "Reply"
+      placeholder: "Recomment..."
+    create:
+      danger_comment: "You can't comment"
+      not_found_film: "Not found film"
+    form:
+      button: "Comment"
+      placeholder: "Comment..."
+  reply_comments:
+    create:
+      danger_comment: "You can't comment"
+      not_found_film: "Not found film"

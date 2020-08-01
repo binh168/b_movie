@@ -1,0 +1,13 @@
+<tr>
+  <td><%= category.id %></td>
+  <td><%= category.name %></td>
+  <td class="text-center">
+    <%= link_to edit_admins_category_path(category) do %>
+      <i class="fa fa-edit"></i>
+    <% end %>
+    <%= link_to admins_category_path(category), method: :delete,
+      data: {confirm: t(".sure")} do %>
+      <i class="fa fa-trash"></i>
+    <% end %>
+  </td>
+</tr>

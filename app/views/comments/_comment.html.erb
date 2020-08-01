@@ -1,0 +1,28 @@
+<li class="media">
+  <%= link_to "#" do %>
+    <%= image_tag Settings.image_default, class: "img-circle" %>
+  <% end %>
+  <div class="media-body">
+    <strong class="text-success"><%= comment.user.email %></strong>
+    <p><i><%= comment.content %></i></p>
+      <% if comment.reply_comment.blank? && user_signed_in? %>
+        <%= link_to t(".reply"), "#replyCommentT#{comment.id}",
+          data: {toggle:"collapse"}, comment_id: comment.id %>
+      <% end %>
+    </span>
+    <div class="collapse" id="replyCommentT<%= comment.id %>">
+      <%= form_for :comment, url: comments_path, remote: true do |f| %>
+        <%= f.hidden_field :reply_comment, value: comment.id %>
+        <%= f.hidden_field :film_id, value: @film.id %>
+        <%= f.text_area :content, class: "form-control", rows: Settings.textarea_row,
+          placeholder: t(".placeholder") %>
+        <%= f.button t(".reply"), class: "btn btn-info pull-right" %>
+      <% end %>
+    </div>
+  </div>
+</li>
+<li>
+  <ul class="sub-comments" id="comment<%= comment.id %>">
+    <%= render partial: 'comments/comment', collection: comment.sub_comments %>
+  </ul>
+</li>

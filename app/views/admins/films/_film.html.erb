@@ -1,0 +1,17 @@
+<tr>
+  <td><%= film.id %></td>
+  <td><%= film.name %></td>
+  <td><%= film.country %></td>
+  <td class="text-center"><%= video_tag url_for(film.movie), controls: true if film.movie.attached? %></td>
+  <td class="text-center"><%= video_tag url_for(film.trailer), controls: true if film.trailer.attached? %></td>
+  <td class="text-center"><%= image_tag film.image if film.image.attached? %></td>
+  <td class="text-center">
+    <%= link_to edit_admins_film_path(film) do %>
+      <i class="fa fa-edit"></i>
+    <% end %>
+    <%= link_to admins_film_path(film), method: :delete,
+      data: {confirm: t(".confirm")} do %>
+      <i class="fa fa-trash"></i>
+    <% end %>
+  </td>
+</tr>

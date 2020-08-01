@@ -1,0 +1,7 @@
+<%= form_for :comment, url: comments_path, remote: true do |f| %>
+  <%= f.hidden_field :reply_comment %>
+  <%= f.hidden_field :film_id, value: @film.id %>
+  <%= f.text_area :content, class: "form-control", rows: Settings.textarea_row,
+    placeholder: t(".placeholder") %>
+  <%= f.button t(".button"), class: "btn btn-info pull-right" %>
+<% end %>

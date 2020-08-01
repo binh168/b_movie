@@ -1,0 +1,16 @@
+<div class="container">
+  <%= link_to new_admins_user_path do %>
+     <i class="fa fa-plus-square btn btn-info"><%= t ".add" %></i>
+   <% end %>
+  <table id="list_users" class="table table-striped table-bordered">
+	<thead>
+	  <th><%= t ".id" %></th>
+		<th><%= t ".full_name" %></th>
+		<th><%= t ".email" %></th>
+		<th class="text-center"><%= t ".action" %></th>
+	  </thead>
+	<tbody>
+	  <%= render partial: "admins/users/user", collection: @users %>
+	</tbody>
+  </table>
+</div>

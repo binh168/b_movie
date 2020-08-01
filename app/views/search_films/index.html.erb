@@ -1,0 +1,32 @@
+<div class="search-index">
+  <% if @films.blank? %>
+    <h2 class= "text-center"><%= t ".no_suitable" %><%= params[:search] %>?</h2>
+  <% else %>
+    <div class="movie-list-index home-v2" >
+      <div class="last-film-box-wrapper">
+        <ul id="movie-last-theater" class="last-film-box">
+          <% @films.each do |film| %>
+            <li>
+              <div class="block-wrapper">
+                <div class="movie-thumbnail ratio-box ratio-3_4">
+                  <div class="public-film-item-thumb ratio-content">
+                    <%= link_to "#", class: "movie-image" do %>
+                      <span class="play"></span>
+                      <%= image_tag film.image %>
+                    <% end %>
+                  </div>
+                </div>
+                <div class="movie-meta">
+                  <div class="movie-title"><%= film.name %></div>
+                  <span class="ribbon"><%= t ".hd" %></span>
+                </div>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      <div class= "paginate">
+        <%= paginate @films, theme: "twitter-bootstrap-4" %>
+      <div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,58 @@
+<footer class="flex-rw">
+  <ul class="footer-list-top">
+    <li>
+      <h4 class="footer-list-header"><%= t ".about" %></h4>
+    </li>
+    <li class="generic-anchor footer-list-anchor"><%= t ".know" %></li>
+    <li class="generic-anchor footer-list-anchor"><%= t ".become" %></li>
+    <li class="generic-anchor footer-list-anchor"><%= t ".job" %></li>
+    <li class="generic-anchor footer-list-anchor"><%= t ".events" %></li>
+  </ul>
+  <ul class="footer-list-top">
+    <li>
+      <h4 class="footer-list-header"><%= t ".location" %></h4>
+    </li>
+    <li>
+      <iframe class="footer-list-header" src=<%= Settings.location %> frameborder="0" allowfullscreen=""></iframe>
+    </li>
+  </ul>
+  <ul class="footer-list-top">
+    <li id="help">
+      <h4 class="footer-list-header"><%= t ".help" %></h4>
+    </li>
+    <li class="generic-anchor footer-list-anchor"><%= t ".contact" %></li>
+    <li class="generic-anchor footer-list-anchor"><%= t ".faq" %></li>
+    <li class="generic-anchor footer-list-anchor"><%= t ".store_locator" %></li>
+    <li class="generic-anchor footer-list-anchor"><%= t ".new_user" %></li>
+    <li class="generic-anchor footer-list-anchor"><%= t ".order_status" %></li>
+  </ul>
+  <section class="footer-social-section flex-rw">
+      <span class="footer-social-overlap footer-social-connect">
+        <%= t ".connect" %>
+        <span class="footer-social-small">
+          <%= t ".with" %>
+        </span>
+        <%= t ".us" %>
+      </span>
+      <span class="footer-social-overlap footer-social-icons-wrapper">
+        <%= link_to "#", class: "generic-anchor" do %>  
+          <%= fa_icon "pinterest", type: :brand %>
+        <% end %>
+        <%= link_to "#", class: "generic-anchor" do %>
+          <%= fa_icon "facebook-f", type: :brand %>
+        <% end %>
+        <%= link_to "#", class: "generic-anchor" do %>
+          <%= fa_icon "twitter", type: :brand %>
+        <% end %>
+        <%= link_to "#", class: "generic-anchor" do %>
+          <%= fa_icon "instagram", type: :brand %>
+        <% end %>
+        <%= link_to "#", class: "generic-anchor" do %>
+          <%= fa_icon "youtube", type: :brand %>
+        <% end %>
+        <%= link_to "#", class: "generic-anchor" do %>
+          <%= fa_icon "google-plus-g", type: :brand %>
+        <% end %>
+      </span>
+  </section>
+</footer>

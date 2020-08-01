@@ -1,0 +1,35 @@
+<div class="container">
+  <%= form_for [:admins, @film] do |f| %>
+    <%= f.label :name, t(".name") %>
+    <%= f.text_field :name, class: "form-control", required: true %><br>
+    <%= f.label :country, t(".country") %>
+    <%= f.text_field :country, class: "form-control", required: true %><br>
+    <%= f.label :movie, t(".movie") %>
+    <%= f.file_field :movie, class: "form-control", required: true %><br>
+    <%= f.label :trailer, t(".trailer") %>
+    <%= f.file_field :trailer, class: "form-control", required: true %><br>
+    <%= f.label :image, t(".image") %>
+    <%= f.file_field :image, class: "form-control", required: true %><br>
+    <div class="field">
+      <%= f.label :category_id %><br>
+      <%= f.select :category_id, options_for_select(category_name), class: "form-control" %>
+    </div><br/>
+    <%= f.fields_for :film_profile, @film_profile do |ff| %>
+      <div class="row">
+        <div class="col-6">
+          <%= ff.label :release_date, t(".release_date") %></br>
+          <%= ff.datetime_select :release_date, class: "form-control" %> 
+        </div>
+        <div class="col-6">
+          <%= ff.label :time, t(".time") %></br>
+          <%= ff.text_field :time, class: "form-control" %> 
+        </div>
+      </div>
+      <%= ff.label :resolution, t(".resolution") %></br>
+      <%= ff.text_field :resolution, class: "form-control" %>
+      <%= ff.label :description, t(".description") %></br>
+      <%= ff.text_area :description, class: "form-control" %>
+    <% end %>
+    <%= f.submit t(".submit"), class: "btn btn-primary" %>
+  <% end %>
+</div>

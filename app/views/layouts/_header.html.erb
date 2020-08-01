@@ -1,0 +1,32 @@
+<div id="header">
+  <%= link_to root_path, id: "logo" do %>
+    <div class="social">
+  <% end %>
+  <% if user_signed_in? %>
+    <ul>
+      <li><%= link_to t(".logout"), destroy_user_session_path,  method: :delete %></li>
+    </ul>
+  <% else %>
+    <ul>
+      <li><%= link_to t(".sign_up"), new_user_registration_path %></li>
+      <li><%= link_to t(".log_in"), new_user_session_path %></li>
+    </ul>
+  <% end %>
+  </div>
+  <div id="navigation">
+    <ul>
+      <li class="float-right">
+        <section class="search">
+          <%= form_tag(search_films_path, method: :get, class: "searchbar") do |f| %>
+            <%= text_field_tag :search, params[:search], class: "search_input",
+              placeholder: t(".search_placeholder") %>
+            <%= button_tag(type: "submit", class: "submit-search" ) do %>
+              <i class="fa fa-search"></i>
+            <% end %>
+          <% end %>
+        </section>
+      </li>
+    </ul>
+  </div>
+  <div id="sub-navigation"></div>
+</div>

@@ -1,0 +1,50 @@
+<% if admin_signed_in? %>
+  <%= render "admins/home" %>
+<% else %>
+  <div id="main">
+    <div id="content">
+      <div class="row">
+        <div class="col-lg-3">
+          <%= render "static_pages/category" %>
+        </div>
+        <div class="col-lg-9">
+          <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <%= image_tag Settings.slide1, class: "d-block img-fluid" %>
+              </div>
+              <div class="carousel-item">
+                <%= image_tag Settings.slide2, class: "d-block img-fluid" %>
+              </div>
+              <div class="carousel-item">
+                <%= image_tag Settings.slide3, class: "d-block img-fluid" %>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only"><%= t ".perious" %></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only"><%= t ".next" %></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <% @categories.take(Settings.take_category).each do |category| %>
+        <div id="product-text">
+          <%= link_to films_path(category: category.id) do %>
+            <h2><%= category.name %></h2>
+          <% end %>
+        </div>
+        <%= render "static_pages/list_movies",
+          films: list_film(category) %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

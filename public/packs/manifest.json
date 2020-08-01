@@ -1,0 +1,74 @@
+{
+  "admin_application.js": "/packs/js/admin_application-bac408e8c1b383d049e8.js",
+  "admin_application.js.map": "/packs/js/admin_application-bac408e8c1b383d049e8.js.map",
+  "application.js": "/packs/js/application-0b57165447294d7ff35c.js",
+  "application.js.map": "/packs/js/application-0b57165447294d7ff35c.js.map",
+  "config.js": "/packs/js/config-c8720f8ad5915c55a2c5.js",
+  "config.js.map": "/packs/js/config-c8720f8ad5915c55a2c5.js.map",
+  "datatable.js": "/packs/js/datatable-9d09aa48c8b045da31c9.js",
+  "datatable.js.map": "/packs/js/datatable-9d09aa48c8b045da31c9.js.map",
+  "entrypoints": {
+    "admin_application": {
+      "js": [
+        "/packs/js/admin_application-bac408e8c1b383d049e8.js"
+      ],
+      "js.map": [
+        "/packs/js/admin_application-bac408e8c1b383d049e8.js.map"
+      ]
+    },
+    "application": {
+      "js": [
+        "/packs/js/application-0b57165447294d7ff35c.js"
+      ],
+      "js.map": [
+        "/packs/js/application-0b57165447294d7ff35c.js.map"
+      ]
+    },
+    "config": {
+      "js": [
+        "/packs/js/config-c8720f8ad5915c55a2c5.js"
+      ],
+      "js.map": [
+        "/packs/js/config-c8720f8ad5915c55a2c5.js.map"
+      ]
+    },
+    "datatable": {
+      "js": [
+        "/packs/js/datatable-9d09aa48c8b045da31c9.js"
+      ],
+      "js.map": [
+        "/packs/js/datatable-9d09aa48c8b045da31c9.js.map"
+      ]
+    },
+    "home": {
+      "js": [
+        "/packs/js/home-8af73024a46586904847.js"
+      ],
+      "js.map": [
+        "/packs/js/home-8af73024a46586904847.js.map"
+      ]
+    },
+    "ratings": {
+      "js": [
+        "/packs/js/ratings-ff03187e7adb8739b611.js"
+      ],
+      "js.map": [
+        "/packs/js/ratings-ff03187e7adb8739b611.js.map"
+      ]
+    },
+    "star_rating_svg": {
+      "js": [
+        "/packs/js/star_rating_svg-d001fed3c9c77a27e06b.js"
+      ],
+      "js.map": [
+        "/packs/js/star_rating_svg-d001fed3c9c77a27e06b.js.map"
+      ]
+    }
+  },
+  "home.js": "/packs/js/home-8af73024a46586904847.js",
+  "home.js.map": "/packs/js/home-8af73024a46586904847.js.map",
+  "ratings.js": "/packs/js/ratings-ff03187e7adb8739b611.js",
+  "ratings.js.map": "/packs/js/ratings-ff03187e7adb8739b611.js.map",
+  "star_rating_svg.js": "/packs/js/star_rating_svg-d001fed3c9c77a27e06b.js",
+  "star_rating_svg.js.map": "/packs/js/star_rating_svg-d001fed3c9c77a27e06b.js.map"
+}

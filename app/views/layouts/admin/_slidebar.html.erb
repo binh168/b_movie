@@ -1,0 +1,31 @@
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+  <%= link_to root_path,
+   class: "sidebar-brand d-flex align-items-center justify-content-center" do %>
+    <div class="sidebar-brand-icon rotate-n-15">
+      <i class="fas fa-laugh-wink"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3"><%= t ".title" %></div>
+  <% end %>
+  <hr class="sidebar-divider my-0">
+  <li class="nav-item">
+    <%= link_to admins_users_path, class: "nav-link collapsed", method: :get do %>
+      <i class="fas fa-users"></i>
+      <span><%= t ".user" %></span>
+    <% end %>
+  </li>
+  <hr class="sidebar-divider my-0">
+  <li class="nav-item collapsed">
+    <%= link_to admins_films_path, class: "nav-link collapsed", method: :get do %>
+      <i class="fa fa-film"></i>
+      <span><%= t ".movie" %></span>
+    <% end %>
+  </li>
+  <hr class="sidebar-divider d-none d-md-block">
+  <li class="nav-item collapsed">
+    <%= link_to admins_categories_path, class: "nav-link collapsed", method: :get do %>
+      <i class="fa fa-align-justify"></i>
+      <span><%= t ".category" %></span>
+    <% end %>
+  </li>
+  <hr class="sidebar-divider d-none d-md-block">
+</ul>

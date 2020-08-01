@@ -1,0 +1,9 @@
+<h2 class="forgot"><%= t ".forgot" %></h2>
+<div id="forgot_form">
+  <%= form_for(resource, as: resource_name, class: "form-reset",
+    url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",
+      class: "form-control", placeholder: t(".email"), required: true %>
+    <button class="btn btn-primary btn-block" type="submit"><%= t ".reset_pass" %></button>
+  <% end %>
+</div>

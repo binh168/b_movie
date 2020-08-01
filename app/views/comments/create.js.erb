@@ -1,0 +1,8 @@
+$('textarea#comment_content').val('');
+if (<%= params[:comment][:reply_comment].to_i %> == 0)
+  $('#list-comment').prepend('<%= escape_javascript(render :partial => 'comments/comment',
+    locals: {comment:  @comment}) %>');
+else
+  $('#comment<%= params[:comment][:reply_comment] %>')
+    .prepend('<%= escape_javascript(render :partial => 'comments/comment',
+    locals: {comment:  @comment}) %>');

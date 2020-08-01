@@ -1,0 +1,20 @@
+<div class= "container">
+  <div class="signup-form">
+    <%= form_for [:admins, @user] do |f| %>
+      <h1><%= t ".user" %></h1>
+      <%= f.label :fullname, t(".name") %>
+      <%= f.text_field :fullname, class: "form-control" %>
+
+      <%= f.label :email, t(".email") %>
+      <%= f.text_field :email, class: "form-control" %>
+
+      <%= f.label :password, t(".password") %>
+      <%= f.password_field :password, autofocus: true, autocomplete: "current-password", class: "form-control",
+        placeholder: t(".password"), required: true %><br>
+
+      <div class="form-group">
+        <%= f.submit t(".submit"), class: "btn btn-success" %>
+      </div>
+    <% end %>
+  </div>
+</div>

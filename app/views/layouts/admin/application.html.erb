@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t ".title" %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "admin_application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_pack_tag "admin_application", "data-turbolinks-track": "reload" %>
+  </head>
+  <body>
+    <div id="page-top">
+      <div id="wrapper">
+        <%= render "layouts/admin/slidebar" %>
+        <div id="content-wrapper" class="d-flex flex-column">
+          <div class="content">
+            <%= render "layouts/admin/header" %>
+              <% flash.each do |message_type, message| %>
+                <div class="alert alert-<%= message_type %>"><%= message %></div>
+              <% end %>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

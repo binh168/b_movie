@@ -1,0 +1,7 @@
+<div class="categpry-group">
+  <% @categories.each do |category| %>
+    <%= link_to films_path(category: category.id) do %>
+      <p class= "list-group-item"><%= category.name %></p>
+    <% end %>
+  <% end %>
+</div>

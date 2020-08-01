@@ -1,0 +1,104 @@
+<div class="container">
+  <div class="col-md-12">
+    <%= video_tag url_for(@film.movie), class: "card-img-top img-fluid video_show",
+      controls: true if @film.movie.attached? %>
+    <div class="card-body">
+      <h3 class="card-title"><%= @film.name %></h3>
+      <h4><button type="button" class="btn btn-primary" data-toggle="modal"
+        data-target="#trailer_movie"><%= t ".trailer" %></button></h4>
+      <p class="card-text">
+        <%=  @film.film_profile.description %>
+      </p>
+      <div class="row">
+        <div class="col-sm-3 text-title">
+          <%= t ".actor" %>
+        </div>
+        <div class="col-sm-3 text-title">
+          <%= t ".resolution" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 "></div>
+        <div class="col-sm-3 ">
+          <%=  @film.film_profile.resolution %>
+        </div>
+      </div><br/>
+      <div class="row">
+        <div class="col-sm-3 text-title">
+          <%= t ".date" %>
+        </div>
+        <div class="col-sm-3 text-title">
+          <%= t ".time" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 ">
+          <%= @film.film_profile.release_date.strftime Settings.release_date %>
+        </div>
+        <div class="col-sm-3 ">
+          <%= @film.film_profile.time %><%= t ".minutes" %>
+        </div>
+      </div><br/><br/>
+      <div class= "row">
+        <div class="col-sm-3 text-title">
+          <p><%= t ".vote" %></p>
+        </div>
+        <div class="col-sm-12">
+          <% if current_user %>
+            <%= render "ratings/new" %>
+          <% else %>
+            <div class="my-rating-8"></div>
+          <% end %>
+        </div>
+      </div>
+      <div class="row bootstrap snippets">
+        <div class="col-md-12 col-sm-12">
+            <div class="comment-wrapper ">
+              <div class="panel panel-primary"> <div class="panel-heading">
+                <h4><%= t ".comment" %></h4>
+                <% if user_signed_in?  %>
+                  <%= render "comments/form" %>
+                <% else %>
+                  <p class="must-login">
+                    <i>
+                      <%= t ".must" %>
+                      <span>
+                        <%= link_to t(".login"), new_user_session_path %>
+                      </span>
+                      <%= t ".to_comment" %>
+                    </i>
+                  </p>
+                <% end %>
+              </div>
+              <div class="panel-body">
+                <%= render "comments/list_comments" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="trailer_movie" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%= t ".trailer" %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="trailler-movie">
+          <%= video_tag url_for(@film.trailer), class: "card-img-top img-fluid",
+            controls: true if @film.trailer.attached? %>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal"><%= t ".close" %></button>
+      </div>
+    </div>
+  </div>
+</div>

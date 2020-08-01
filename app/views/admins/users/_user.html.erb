@@ -1,0 +1,14 @@
+<tr>
+  <td><%= user.id %></td>
+  <td><%= user.fullname %></td>
+  <td><%= user.email %></td>
+  <td class="text-center">
+    <%= link_to edit_admins_user_path(user) do %>
+      <i class="fa fa-edit"></i>
+    <% end %>
+    <%= link_to admins_user_path(user), method: :delete,
+      data: {confirm: t(".confirm")} do %>
+      <i class="fa fa-trash"></i>
+    <% end %>
+  </td>
+</tr>
